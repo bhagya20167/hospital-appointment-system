@@ -82,7 +82,7 @@ Deploy the app on Render / Vercel / PythonAnywhere
 
 ## 👤 Author
 Bhagya Pasupuleti
-📧 Email: your.bhagyapasupuleti636@gmail.com
+📧 Email:bhagyapasupuleti636@gmail.com
 🌐 GitHub: @bhagya20167
 
 ## ⭐ If you like this project, give it a star on GitHub!
