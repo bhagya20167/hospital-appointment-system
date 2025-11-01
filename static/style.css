@@ -1,0 +1,39 @@
+body {
+    font-family: Arial;
+    text-align: center;
+    background-color: #f2f8ff;
+    padding: 40px;
+}
+
+h1, h2 {
+    color: #00509e;
+}
+
+form {
+    display: inline-block;
+    text-align: left;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px gray;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input, select, button {
+    margin-top: 5px;
+    width: 100%;
+    padding: 5px;
+}
+
+button {
+    background-color: #0078d7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+}

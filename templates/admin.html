@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard - Appointments</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2>📋 All Booked Appointments</h2>
+    <table border="1" cellpadding="10" cellspacing="0" align="center">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Department</th>
+            <th>Date</th>
+            <th>Time</th>
+        </tr>
+        {% for appt in appointments %}
+        <tr>
+            <td>{{ appt[0] }}</td>
+            <td>{{ appt[1] }}</td>
+            <td>{{ appt[2] }}</td>
+            <td>{{ appt[3] }}</td>
+            <td>{{ appt[4] }}</td>
+            <td>{{ appt[5] }}</td>
+            <td>{{ appt[6] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <a href="/">🏠 Back to Home</a>
+    <h2>All Appointments</h2>
+<table border="1">
+    <tr>
+        <th>ID</th><th>Name</th><th>Age</th><th>Gender</th><th>Department</th><th>Date</th><th>Time</th><th>Action</th>
+    </tr>
+    {% for a in appointments %}
+    <tr>
+        <td>{{ a[0] }}</td>
+        <td>{{ a[1] }}</td>
+        <td>{{ a[2] }}</td>
+        <td>{{ a[3] }}</td>
+        <td>{{ a[4] }}</td>
+        <td>{{ a[5] }}</td>
+        <td>{{ a[6] }}</td>
+        <td>
+            <form action="{{ url_for('delete_appointment', appointment_id=a[0]) }}" method="POST">
+                <button type="submit" onclick="return confirm('Delete this appointment?');">Delete</button>
+            </form>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
